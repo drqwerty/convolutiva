@@ -48,7 +48,7 @@ with tf.Session() as sess:
         resized = cv2.resize(img, (140, 80), interpolation=cv2.INTER_AREA)
         #cropped = resized[0:180, 70:250]
         #resized64 = cv2.resize(cropped, (128, 128), interpolation=cv2.INTER_AREA)
-        gray = np.asarray(cv2.cvtColor(resized, cv2.COLOR_BGR2GRAY))
+        gray = np.asarray(cv2.cvtColor(resized, 7))
 
         cv2.imshow('Capture', gray)
         frame = gray.reshape(-1, 80, 140, 1)
